@@ -17,16 +17,20 @@ buttonElement.addEventListener("click",
 
     function(){
             // chiedere all'utente di inserire una mail
+            const mailUtente = document.getElementById("mail").value;
+            let y = 0 ;
             
-            /* document.getElementById("result").innerText = mails[mailUtente]; */
             for(let i=0; i<mails.length; i++){
-                const mailUtente = document.getElementById("mail").value;
                 console.log(mailUtente); 
                 if(mailUtente == mails[i]){
-                    document.getElementById("result").innerText = `Hai inserito una mail corretta`;
-                } else{
-                    document.getElementById("result").innerText = `La mail inserita non esiste`;
-                }
+                    y = 1;
+                } 
+            }
+
+            if (y == 0){
+                document.getElementById("result").innerText =`La mail inserita non è corretta.`;
+            } else{
+                document.getElementById("result").innerText = `Hai inserito una mail corretta`;
             }
 
             
