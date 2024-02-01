@@ -17,7 +17,11 @@ buttonElement.addEventListener("click",
 
              // devo far scegliere un numero al computer
             const computer = Math.floor(Math.random() * 6 + 1);
-            console.log(computer);      
+            console.log(computer); 
+            
+            // devo controllare che il numerom inserito sia effettivamente un numero, e che sia compreso tra 1 e 6!
+
+            
             if(inputElement>computer){
                 document.getElementById("result").innerHTML = `Il numero ${inputElement} scelto dall'utente è maggiore del numero ${computer} scelto dal computer.<br>Hai vinto!`
             } else if (inputElement<computer){
